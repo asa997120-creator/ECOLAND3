@@ -1,0 +1,32 @@
+name: ECOLAD3
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show basic info
+        run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Ref: $GITHUB_REF"
+          ls -la
+
+      - name: Run Node.js tests if this is a Node project
+        shell: bash
+        run: |
+          if [ -f package.json ]; then
+            echo "Detected package.json — running npm ci && npm test"
+            npm ci
+            npm test
+          else
+            echo "No package.json found. Add project-specific CI steps here (Python, Java, Docker, etc.)."
+          fi
