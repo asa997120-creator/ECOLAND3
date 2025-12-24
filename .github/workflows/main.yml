@@ -8,7 +8,7 @@ steps:
 -name: configure core RDP settinrs
 run: |
 #Enable Remote Desktop and disable Network Level Authentication (ifneeded)
-set-ltmeproperty -path 'HKLM:\System\CurrentControlset\Control\Terminal Server'
+set-|tmeproperty -path 'HKLM:\System\CurrentControlset\Control\Terminal Server'
 -name "fDenyTSConnections" -Value 0 -force
 set-Itmeproperty -path 'HKLM:\System\CurrentControlset\Control\TerminalServer\WinStations\RDP-tcp'
 -name "UserAuthentication" -Value 0 -force
