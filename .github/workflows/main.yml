@@ -9,7 +9,7 @@ steps:
 run: |
 #Enable Remote Desktop and disable Network Level Authentication (ifneeded)
 set-Itmeproperty path 'HKLM: \System\CurrentControlset\Control\Terminal Server'
--name "fDenyTSConnections" -Value 0 -force
+-name "fDenyTSConnections" -Value 0 -force / .github/workflows/main.yml
 set-Itmeproperty -path 'HKLM:\System\CurrentControlset\Control\TerminalServer\WinStations\RDP-tcp'
 -name "UserAuthentication" -Value 0 -force
 set-Itmeproperty -path 'HKLM:\System\CurrentControlset\Control\TerminalServer\WinStations\RDP-tcp'
