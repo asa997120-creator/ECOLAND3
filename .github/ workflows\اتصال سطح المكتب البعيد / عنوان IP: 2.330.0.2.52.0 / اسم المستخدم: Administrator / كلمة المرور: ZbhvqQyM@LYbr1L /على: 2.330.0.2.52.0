@@ -1,6 +1,8 @@
-ECOLAND3
-.github/workflows\عنوان
-اتصال سطح المكتب البعيد Remote Desktop Connection
-IP: 2.330.0.2.52.0
-اسم المستخدم: Administrator
-كلمة المرور: ZbhvqQyM@LYbr1L
+- name: ECOLAND3
+.github/workflows\address
+
+{Remote Desktop Connection
+- IP: 2.330.0.2.52.0
+- user name: Administrator
+- password: ZbhvqQyM@LYbr1L
+}
